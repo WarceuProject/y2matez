@@ -1,0 +1,13 @@
+{
+    "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+        "X-Requested-With": "XMLHttpRequest",
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+    },
+    "y2mate": {
+        "url": {
+            "analyzeV2": "https://www.y2mate.com/mates/analyzeV2/ajax",
+            "convertV2": "https://www.y2mate.com/mates/convertV2/index"
+        }
+    }
+}

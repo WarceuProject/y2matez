@@ -128,3 +128,9 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# me
+out.json
+index.old*
+index.[0-9]*
+package-lock*
