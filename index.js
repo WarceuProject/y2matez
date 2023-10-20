@@ -47,6 +47,7 @@ class Y2Matez {
 
         // set query
         this.query = query;
+        this.nourl = true;
 
         return this;
     }
@@ -59,6 +60,7 @@ class Y2Matez {
 
         // set url
         this.url = this.parseYoutubeId(url, 1).url;
+        this.nourl = false;
 
         return this;
     }
@@ -92,6 +94,9 @@ class Y2Matez {
         if ([this.query, this.url].every(opt => opt === null)) {
             throw Error("Missing query or url");
         }
+    }
+    async getVideoDetail(videoId) {
+        const detail = this.query && this.nourl ? await (new YTSearch({ query: this.query }).getFirstVideo()) : await YTSearch.search({ videoId }).catch(e => typeof e === typeof "" ? Error(e) : e);
     }
     async analyze(text) {
         if (hasOwnProperty.call(arguments, 0)) {
